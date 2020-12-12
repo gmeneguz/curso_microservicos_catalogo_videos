@@ -25,7 +25,8 @@
     "extensions": [
         "bmewburn.vscode-intelephense-client",
         "calebporzio.better-phpunit",
-        "onecentlin.laravel5-snippets"
+        "onecentlin.laravel5-snippets",
+        "esbenp.prettier-vscode"
     ]
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.

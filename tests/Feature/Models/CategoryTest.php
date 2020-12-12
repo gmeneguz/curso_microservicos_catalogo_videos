@@ -45,7 +45,7 @@ class CategoryTest extends TestCase
 
       $category = factory(Category::class)->create([
         'description' => 'test_description'
-      ])->first();
+      ]);
 
       $data = [
         'name' => 'test_name',
