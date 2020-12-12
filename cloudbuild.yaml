@@ -5,7 +5,7 @@ steps:
 
     - id: 'Rodando o php composer'
       name: 'gcr.io/cloud-builders/docker'
-      args: ['exec', '-t', 'app', 'bash', '-c', "'yes | composer install'"]
+      args: ['exec', '-t', 'app', 'bash', '-c', 'yes | composer install']
 
     - id: 'Copiando .env'
       name: 'gcr.io/cloud-builders/docker'
