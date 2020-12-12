@@ -3,6 +3,20 @@ steps:
       name: 'gcr.io/$PROJECT_ID/docker-compose:1.25.5'
       args: ['-f', 'docker-compose.prod.yaml', 'up', '-d']
 
+    - id: 'Chown no www'
+      name: 'gcr.io/cloud-builders/docker'
+      args:
+          [
+              'exec',
+              '-u',
+              'root',
+              '-t',
+              'app',
+              'bash',
+              '-c',
+              'chown -R www-data:www-data /var/www',
+          ]
+
     - id: 'Rodando o php composer'
       name: 'gcr.io/cloud-builders/docker'
       args: ['exec', '-t', 'app', 'bash', '-c', 'yes | composer install']
